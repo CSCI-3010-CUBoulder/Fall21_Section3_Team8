@@ -91,7 +91,13 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 double Sum(std::vector<double> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-double Product(std::vector<double> nums);
+double Product(std::vector<double> nums){
+    double product=1;
+    for(int i=0;i<nums.size();i++){
+        product*=nums[i];
+    }
+    return product;
+}
 
 // Adds an double n to each element of a given vector
 std::vector<double> VectorPlusN(std::vector<double> v, double n);
