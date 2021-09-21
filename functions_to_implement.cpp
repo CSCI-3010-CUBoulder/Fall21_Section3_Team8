@@ -1,4 +1,6 @@
 /* String functions section */
+#include <vector>
+#include <iostream>
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -39,7 +41,13 @@ int Sum(std::vector<int> nums){
 }
 
 // Multiplies all numbers in a vector together and returns the resulting value
-int Product(std::vector<int> nums);
+int Product(std::vector<int> nums){
+    int product=1;
+    for(int i=0;i<nums.size();i++){
+        product*=nums[i];
+    }
+    return product;
+}
 
 // Adds an integer n to each element of a given vector
 std::vector<int> VectorPlusN(std::vector<int> v, int n){
@@ -91,13 +99,7 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 double Sum(std::vector<double> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-double Product(std::vector<double> nums){
-    double product=1;
-    for(int i=0;i<nums.size();i++){
-        product*=nums[i];
-    }
-    return product;
-}
+double Product(std::vector<double> nums);
 
 // Adds an double n to each element of a given vector
 std::vector<double> VectorPlusN(std::vector<double> v, double n);
@@ -128,3 +130,21 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+int main(){
+    std::vector<int> nums;
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    nums.push_back(5);
+    std::cout << "Sum of a elements in vector: " << Sum(nums) << std::endl;
+    nums = VectorPlusN(nums,5);
+    std::cout << "Valuesof vector elements after 5 was added to each element: ";
+    for(int i=0;i<nums.size();i++){
+        std::cout<< nums[i] << " ";
+    }
+    std::cout<<std::endl;
+    std::cout << "Product of a elements in vector: " << Product(nums) << std::endl;
+    return 0;
+}
