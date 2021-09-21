@@ -131,20 +131,20 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
 
-int main(){
-    std::vector<int> nums;
-    nums.push_back(1);
-    nums.push_back(2);
-    nums.push_back(3);
-    nums.push_back(4);
-    nums.push_back(5);
-    std::cout << "Sum of a elements in vector: " << Sum(nums) << std::endl;
-    nums = VectorPlusN(nums,5);
-    std::cout << "Valuesof vector elements after 5 was added to each element: ";
-    for(int i=0;i<nums.size();i++){
-        std::cout<< nums[i] << " ";
-    }
-    std::cout<<std::endl;
-    std::cout << "Product of a elements in vector: " << Product(nums) << std::endl;
-    return 0;
-}
+// int main(){
+//     std::vector<int> nums;
+//     nums.push_back(1);
+//     nums.push_back(2);
+//     nums.push_back(3);
+//     nums.push_back(4);
+//     nums.push_back(5);
+//     std::cout << "Sum of a elements in vector: " << Sum(nums) << std::endl;
+//     nums = VectorPlusN(nums,5);
+//     std::cout << "Valuesof vector elements after 5 was added to each element: ";
+//     for(int i=0;i<nums.size();i++){
+//         std::cout<< nums[i] << " ";
+//     }
+//     std::cout<<std::endl;
+//     std::cout << "Product of a elements in vector: " << Product(nums) << std::endl;
+//     return 0;
+// }
